@@ -9,13 +9,6 @@
 # data = pd.DataFrame({'whoAmI':lst})
 # data.head()
 
-# # 1 вариант
-# data = data.melt(ignore_index=False).reset_index().pivot_table('variable', 'index', 'value', aggfunc='count').fillna(0)
+# pd.get_dummies(obj_df, columns=['whoAmI']).head()
 
-# print(data)
-
-# # 2 вариант
-# data = pd.get_dummies(data.melt(ignore_index=False).value).groupby(level=0).max()
-
-# print(data)
 
